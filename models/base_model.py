@@ -10,8 +10,8 @@ class BaseModel:
     def __init__(self):
         """initializes an instance"""
         self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        self.created_at = datetime.today()
+        self.updated_at = datetime.today()
 
     def __str__(self):
         """returns a string"""
