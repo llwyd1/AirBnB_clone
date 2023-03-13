@@ -16,8 +16,8 @@ class BaseModel:
     def __str__(self):
         """returns a string"""
 
-        return "[{}] ({}) {}"\
-            .format(type(self).__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".\
+            format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
         """updated the public instance attribute updated_at"""
@@ -30,7 +30,7 @@ class BaseModel:
         """
 
         my_dict = self.__dict__.copy()
-        my_dict['__class__'] = type(self).__name__
-        my_dict['created_at'] = my_dict['created_at'].isoformat()
-        my_dict['updated_at'] = my_dict['updated_at'].isoformat()
+        my_dict["__class__"] = type(self).__name__
+        my_dict["created_at"] = my_dict["created_at"].isoformat()
+        my_dict["updated_at"] = my_dict["updated_at"].isoformat()
         return my_dict
